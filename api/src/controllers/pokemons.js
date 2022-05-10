@@ -45,6 +45,7 @@ module.exports={
         try {
         
         const {name,hp,attack,defense,speed,height,weight,img,types}=req.body
+       
         const typedb= await Type.findAll({
             where:{
                 name:types
@@ -73,7 +74,10 @@ module.exports={
        
         await pokemon.addTypes(typedb)
 
-  
+        if (name) {
+            
+        }
+         
          if (created) {;
              return res.status(201).send({mds:'Pokemon created', pokemon})
          } else{

@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Modal from './Modal'
-import {createPokemon, getTypes} from '../redux/actions/index'
+import {createPokemon, getPokemons, getTypes} from '../redux/actions/index'
 import { validator } from './validator';
 import Navigation from './Navigation';
 import {TYPE_TO_COLOR_MAP} from './colorsType'
@@ -167,6 +167,8 @@ const ContainerModal=styled.div`
 export const Form = () => {
 
   const types = useSelector(state => state.types);
+  const allPokemons = useSelector(state => state.allPokemons);
+  const pokename=allPokemons.map(poke=>poke.name)
   const dispatch = useDispatch();
   const [pokemon,setPokemon]=useState({
     name: '',
@@ -185,6 +187,7 @@ export const Form = () => {
 
   useEffect(() => {
     dispatch(getTypes());
+    dispatch(getPokemons())
   }, [dispatch]);
 
   const handleChange=e=>{
@@ -233,6 +236,10 @@ export const Form = () => {
       img: pokemon.img || " ",
       types: pokemon.types,
     };
+      
+    if (pokename.includes(pokemon.name)) {
+      return  alert('There is already a pokemon with this name')
+    }
     setErrors(validator(poke))
     if (
       Object.keys(errors).length === 0 &&
@@ -263,8 +270,7 @@ export const Form = () => {
     });
     }
 
-    
-    
+  
   }
     
 
