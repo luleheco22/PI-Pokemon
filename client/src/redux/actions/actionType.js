@@ -1,0 +1,9 @@
+export const GET_POKEMONS='GET_POKEMONS';
+export const GET_POKEMON_DETAILS='GET_POKEMON_DETAILS';
+export const GET_TYPE='GET_TYPE';
+export const SORT='SORT';
+export const FILTER_BYTYPE='FILTER_TYPE';
+export const FILTER_STATS='FILTER_STATS';
+export const FILTER_CREATE='FILTER_CREATE'
+export const CREATE_POKEMON='CREATE_POKEMON';
+
