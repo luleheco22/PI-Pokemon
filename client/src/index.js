@@ -7,6 +7,13 @@ import {Provider} from 'react-redux'
 import store from './redux/store/store'
 import {BrowserRouter} from 'react-router-dom'
 import '../node_modules/normalize.css/normalize.css'
+import axios from 'axios';
+import dotenv from 'dotenv'
+dotenv.config();
+
+axios.defaults.baseURL=process.env.REACT_APP_API || 'http://localhost:3001'
+
+
 ReactDOM.render(
  <BrowserRouter>
   <React.StrictMode>
