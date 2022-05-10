@@ -211,18 +211,6 @@ const getTypeApi=async()=>{
     }
 }
 
-// const getTypes=async ()=>{
-//     try {
-//        let dbTypes=await Type.findAll()
-//        dbTypes=dbTypes.map((type=>)) 
-//     } catch (error) {
-        
-//     }
-// }
-
-
-
-
 
 const  getAllPokemonsInfo= async()=>{
     try {
