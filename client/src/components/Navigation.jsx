@@ -48,8 +48,6 @@ const Navigation = () => {
             <Menu>
             <Link to='/'> <MenuItem>Inicio</MenuItem></Link> 
             <Link to='/home'><MenuItem>Home</MenuItem></Link>
-              <MenuItem>Juegos</MenuItem>
-              <MenuItem>About</MenuItem>
             </Menu>
            <Link to='/form'><Button text='Create Pokemon'></Button></Link> 
         </NavBar>

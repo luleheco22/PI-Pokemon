@@ -9,9 +9,7 @@ export const SinglePoke = ({currentPoke}) => {
                <Card
                  key={poke.id} 
                 {...poke}
-                />
-
-         
+                />      
          )
 
     })}

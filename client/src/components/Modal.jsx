@@ -9,7 +9,6 @@ const ContainerModal=styled.div`
   border-radius: 5px;
   box-shadow: egba(100,100,111,0.2) 0px 7px 29px 0px;
   padding: 20px;
-
 `
 const Overlay=styled.div`
    width: 100vw;
@@ -22,7 +21,6 @@ const Overlay=styled.div`
    align-items: center;
    justify-content: center;
    padding: 1rem;
-
 `
 const HeadModal=styled.div`
 display: flex;
